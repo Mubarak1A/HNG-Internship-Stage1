@@ -1,6 +1,5 @@
 const express = require('express');
 const axios = require('axios');
-const serverless = require('serverless-http');
 
 const app = express();
 
@@ -28,5 +27,6 @@ app.get('/api/hello', async (req, res) => {
     });
 });
 
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
 module.exports = app;
-module.exports.handler = serverless(app);
