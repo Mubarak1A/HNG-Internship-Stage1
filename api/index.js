@@ -5,6 +5,10 @@ const app = express();
 
 require('dotenv').config();
 
+app.get('/', (req, res) => {
+    res.send('Hello world')
+})
+
 app.get('/api/hello', async (req, res) => {
     const clientName = req.query.user_name || 'User';
 
