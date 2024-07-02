@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/hello', async (req, res) => {
-    const clientName = req.query.user_name || 'User';
+    const clientName = req.query.visitor_name || 'User';
 
     let clientIp = (req.ip != '::ffff:127.0.0.1') ? req.ip : '41.203.78.171';
 
