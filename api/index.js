@@ -13,7 +13,7 @@ app.get('/api/hello', async (req, res) => {
     const clientName = req.query.visitor_name || 'User';
 
     let clientIp = (req.ip != '::ffff:127.0.0.1') ? 
-        (req.headers['x-forwarded-for'] || req.connection.remoteAddress || '').split(',')[0].trim(); : 
+        (req.headers['x-forwarded-for'] || req.connection.remoteAddress || '').split(',')[0].trim() : 
         '41.203.78.171';
 
     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.API_KEY}&q=${clientIp}`;
