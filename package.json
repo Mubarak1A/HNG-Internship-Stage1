@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": ">=v16"
+    "node": "20.x"
   },
   "scripts": {
+    "start": "node api/index.js",
+    "build": "echo 'No build step required'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,7 +17,6 @@
     "axios": "^1.7.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "nodemon": "^3.1.4",
     "serverless-http": "^3.2.0"
   }
 }
