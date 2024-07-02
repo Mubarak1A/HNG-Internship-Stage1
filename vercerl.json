@@ -1,8 +1,12 @@
 {
+    "version": 2,
     "functions": {
       "api/index.js": {
         "handler": "api/index.handler"
       }
-    }
+    },
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/api/index.js" }
+    ]
   }
   
